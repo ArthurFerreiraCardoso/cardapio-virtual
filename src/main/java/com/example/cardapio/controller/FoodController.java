@@ -28,7 +28,7 @@ public class FoodController {
     }
 
 
-    @Operation(summary = "Busca da lista de alimentos do cardápio ", method = "GET")
+    @Operation(summary = "Busca da lista de alimentos do cardapio ", method = "GET")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "Busca realizada com sucesso"),
             @ApiResponse(responseCode = "422", description = "Dados de requisição inválida"),
