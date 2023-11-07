@@ -35,7 +35,7 @@ public class FoodController {
             @ApiResponse(responseCode = "400", description = "Parametros inválidos"),
             @ApiResponse(responseCode = "500", description = "Erro ao realizar busca dos dados"),
     })
-    @GetMapping(name = "/list")
+    @GetMapping("/list")
     public List<FoodResponseDTO> getAll() {
         List<FoodResponseDTO> list = foodService.getAll();
         return list;
@@ -48,7 +48,7 @@ public class FoodController {
             @ApiResponse(responseCode = "400", description = "Parametros inválidos"),
             @ApiResponse(responseCode = "500", description = "Erro ao realizar o upload de arquivo"),
     })
-    @PostMapping(name = "/register", consumes = MediaType.APPLICATION_JSON_VALUE)
+    @PostMapping(value = "/register" , consumes = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<FoodRequestDTO> registerFood(@RequestBody FoodRequestDTO food) {
         foodService.registerFood(food);
         return ResponseEntity.ok(food);

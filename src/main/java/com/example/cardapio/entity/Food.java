@@ -2,6 +2,7 @@ package com.example.cardapio.entity;
 
 import com.example.cardapio.DTO.FoodRequestDTO;
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
@@ -16,8 +17,11 @@ import lombok.NoArgsConstructor;
 public class Food {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    @NotNull
     private String name;
+    @NotNull
     private Float price;
+    @NotNull
     private String image;
 
 public Food (FoodRequestDTO foodRequestDTO){
